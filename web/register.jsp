@@ -11,12 +11,17 @@
     <title>Title</title>
 </head>
 <body>
-    <%
-        if (request.getAttribute("message") !=  null){
-            System.out.println(request.getAttribute("message"));
-            out.println(request.getAttribute("message") + "<br/>");
-        }
-    %>
+    <%--<%--%>
+        <%--if (request.getAttribute("message") !=  null){--%>
+            <%--System.out.println(request.getAttribute("message"));--%>
+            <%--out.println(request.getAttribute("message") + "<br/>");--%>
+        <%--}--%>
+    <%--%>--%>
+
+
+
+    <%--el表达式--%>
+    ${requestScope.message}<br/>
     <form action="<%=request.getContextPath()%>/register_do" method="post">
         注册
         <hr/>

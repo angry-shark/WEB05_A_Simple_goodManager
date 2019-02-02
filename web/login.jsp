@@ -11,11 +11,15 @@
     <title>Title</title>
 </head>
 <body>
-<%
-    if (request.getAttribute("message") !=  null){
-        out.println(request.getAttribute("message") + "<br/>");
-    }
-%>
+<%--<%--%>
+    <%--if (request.getAttribute("message") !=  null){--%>
+        <%--out.println(request.getAttribute("message") + "<br/>");--%>
+    <%--}--%>
+<%--%>--%>
+
+<%--el表达式--%>
+    ${requestScope.message}<br/>
+
 <form action="<%=request.getContextPath()%>/login_do" method="post">
     登陆
     <hr/>

@@ -23,7 +23,10 @@ public class LoginServlet extends HttpServlet {
             //TODO
            if (user.isAdmin()){
                //TODO
-               response.sendRedirect(request.getContextPath()+ "/admin/good_lists.jsp");
+               //response.sendRedirect(request.getContextPath()+ "/admin/good_lists.jsp");
+               //将请求转发到GoodListServlet
+               //request.getRequestDispatcher("/admin/good_lists").forward(request,response);
+               response.sendRedirect(request.getContextPath()+ "/admin/good_lists");
            }else{
                request.getRequestDispatcher("/index.jsp").forward(request,response);
            }
