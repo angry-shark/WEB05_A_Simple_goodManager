@@ -1,5 +1,7 @@
 package model;
 
+import com.alibaba.fastjson.JSON;
+
 public class User {
     private String username;
     private String password;

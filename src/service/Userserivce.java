@@ -22,4 +22,8 @@ public class Userserivce {
         UserDao userDao = new UserDao();
         return userDao.getUserByUsernameAndPassword(_username,_password);
     }
+
+    public boolean isExist(String _username){
+        return new UserDao().isExist(_username);
+    }
 }
