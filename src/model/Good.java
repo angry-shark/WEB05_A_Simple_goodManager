@@ -1,32 +1,22 @@
 package model;
 
 public class Good {
-    private String name;
-    private String des;
     private int price;
-    private int inventory;
+    private int itemid;
+    private String itemName;
 
-    public Good(String name, String des, int price, int inventory) {
-        this.name = name;
-        this.des = des;
+    public Good(int price, int itemid, String itemName) {
         this.price = price;
-        this.inventory = inventory;
+        this.itemid = itemid;
+        this.itemName = itemName;
     }
 
-    public String getName() {
-        return name;
+    public String getItemName() {
+        return itemName;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDes() {
-        return des;
-    }
-
-    public void setDes(String des) {
-        this.des = des;
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
     }
 
     public int getPrice() {
@@ -37,12 +27,11 @@ public class Good {
         this.price = price;
     }
 
-    public int getInventory() {
-        return inventory;
+    public int getItemid() {
+        return itemid;
     }
 
-    public void setInventory(int inventory) {
-        this.inventory = inventory;
+    public void setItemid(int itemid) {
+        this.itemid = itemid;
     }
-
 }

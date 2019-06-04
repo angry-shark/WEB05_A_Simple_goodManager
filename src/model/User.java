@@ -3,28 +3,23 @@ package model;
 import com.alibaba.fastjson.JSON;
 
 public class User {
-    private String username;
+    private String userid;
     private String password;
-    private int age;
-    private String sex;
+    private String customerid;
+    private boolean isAdmin;
 
-    public User(String username, String password, int age, String sex, boolean isAdmin) {
-        this.username = username;
+    public User(String customerid,String username, String password) {
+        this.userid = username;
         this.password = password;
-        this.age = age;
-        this.sex = sex;
-        this.isAdmin = isAdmin;
+        this.customerid = customerid;
     }
 
-    private boolean isAdmin = false;
-
-
-    public String getUsername() {
-        return username;
+    public String getUserid() {
+        return userid;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserid(String userid) {
+        this.userid = userid;
     }
 
     public String getPassword() {
@@ -35,30 +30,11 @@ public class User {
         this.password = password;
     }
 
-    public int getAge() {
-        return age;
+    public String getCustomerid() {
+        return customerid;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setCustomerid(String customerid) {
+        this.customerid = customerid;
     }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
-
-    public boolean isAdmin() {
-        return isAdmin;
-    }
-
-    public void setAdmin(boolean admin) {
-        isAdmin = admin;
-    }
-
-
-
 }

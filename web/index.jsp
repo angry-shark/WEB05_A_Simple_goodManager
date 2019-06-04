@@ -10,33 +10,38 @@
 <html>
   <head>
     <title>首页</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
   </head>
   <body>
-  <c:choose>
-      <%--如果user为空--%>
-      <c:when test="${empty sessionScope.user}">
-          <a href="<%request.getContextPath();%>/login.jsp">登陆</a> <a href="<%request.getContextPath();%>/register.jsp">注册</a>
-      </c:when>
-      <c:otherwise>
-          当前登录用户：${sessionScope.user.username}
-      </c:otherwise>
-  </c:choose>
 
+    <div class="container">
+        <form action="<%=request.getContextPath()%>/login_do" method="post">
+            <h2 class="text-center">登陆</h2>
+            <hr/>
+            <div class="row">
+                <div class="col-xs-4"></div>
+                <div class="col-xs-4 well">
+                    <div class="form-group">
+                        customerid：<input type="text" name="customerid" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        username：<input type="text" name="username" class="form-control"/>
+                    </div>
 
+                    <div class="form-group">
+                        password：<input type="password" name="password" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="登陆" class="btn btn-primary pull-left" style="margin: 60px;">
+                        <a href="<%request.getContextPath();%>/register.jsp" class="btn btn-primary pull-right" style="margin: 60px;">注册</a>
+                    </div>
+                </div>
+                <div class="col-xs-4"></div>
+            </div>
 
-  <%--<%--%>
-    <%--Object user = session.getAttribute("user");--%>
-    <%--if (user == null){--%>
-        <%--System.out.println("no");--%>
-        <%--%>--%>
-        <%--<a href="<%request.getContextPath();%>/login.jsp">登陆</a> <a href="<%request.getContextPath();%>/register.jsp">注册</a>--%>
-        <%--<%--%>
-    <%--}else{--%>
-      <%--System.out.println("yes");--%>
-      <%--out.println("当前登陆用户：" + ((User)user).getUsername());--%>
-    <%--}--%>
-  <%--%>--%>
-  <hr/>
-  各种商品的展示
+        </form>
+    </div>
   </body>
 </html>
